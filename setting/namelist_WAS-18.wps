@@ -1,0 +1,39 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '1950-01-01_00:00:00',
+ end_date   = '2005-12-31_12:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ debug_level = 0,
+/
+
+&geogrid
+ parent_id         = 1,
+ parent_grid_ratio = 1,
+ i_parent_start    = 1,
+ j_parent_start    = 1,
+ e_we = 559,
+ e_sn = 409,
+ geog_data_res = '30s+default',
+ dx = 18000,
+ dy = 18000,
+ map_proj = 'lambert',
+ ref_lat   = 16.93,
+ ref_lon   = 67.18,
+ truelat1  = 0.0
+ truelat2  = 30.0
+ stand_lon = 67.18,
+ geog_data_path = '/gpfs/projects/meteo/WORK/josipa/CMIP6toWRF/WPS_GEOG/',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+/
+

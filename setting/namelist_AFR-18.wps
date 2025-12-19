@@ -1,0 +1,41 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '1950-01-01_00:00:00',
+ end_date   = '2005-12-31_12:00:00',
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ debug_level = 0,
+/
+
+&geogrid
+ parent_id         = 1,
+ parent_grid_ratio = 1,
+ i_parent_start    = 1,
+ j_parent_start    = 1,
+ e_we          = 541,
+ e_sn          = 560,
+ geog_data_res = '30s+default',
+ dx = 0.165,
+ dy = 0.165,
+ map_proj =  'lat-lon',
+ ref_y = 547,
+ ref_x = 13,
+ ref_lat   =  42.24,
+ ref_lon   = -24.64,
+ pole_lat  =  90.0,
+ pole_lon  =   0.0,
+ stand_lon =   0.0,
+ geog_data_path = '/gpfs/projects/meteo/WORK/josipa/CMIP6toWRF/WPS_GEOG/',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+/
+
