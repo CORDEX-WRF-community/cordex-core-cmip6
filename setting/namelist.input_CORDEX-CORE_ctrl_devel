@@ -131,7 +131,7 @@
  shcu_physics                        = 0,       ! no independent shallow cumulus (shcu handled by MYNN-EDMF below)
 
  surface_input_source                = 3,       ! (default) dominant land and soil categories from WPS/geogrid.
- use_wudapt_lcz                      = .true.
+ use_wudapt_lcz                      = 1,
  num_land_cat                        = 61,
  num_soil_layers                     = 4,
  
