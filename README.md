@@ -5,6 +5,7 @@ By now, check the [current plans and status](https://cordex-wrf-community.github
 Check [here](https://wcrp-cordex.github.io/simulation-status/CORDEX_CMIP6_status_by_experiment.html#All-CORDEX-CORE) the status of the whole CORDEX-CORE-CMIP6 experiment.
 
 ## Model configuration
+
 Several major points common to the WRF runs across all CORDEX-CORE-CMIP6 domains:
 
  - The model resolution is ~12 km, and coarser only for larger domains.
@@ -15,8 +16,15 @@ Several major points common to the WRF runs across all CORDEX-CORE-CMIP6 domains
 
  - Aerosols will be read from the input file with data extracted from the forcing models. The tool [aerosols4wrf](https://github.com/AEI-CORDyS/aerosols4wrf) is available to use for creating aerosol (AOD) files. The manual and contact information for support are provided at the same link.
 
- - geo_em files for [AFR-18](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_AFR-18_geo_ems.tar.gz), [WAS-18](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_WAS-18_geo_ems.tar.gz), and [SAM-12](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_SAM-12_geo_ems.tar.gz) are prepared with MODIS LULC, ovelayed with LCZ (geo_em.d01_{domain}_LCZ_params.nc). These geo_em files also unclude [HWSD](https://www.wdc-climate.de/ui/entry?acronym=WRF_NOAH_HWSD_world_TOP_ST_v121) top soil texture, and monthly LAI based on 15-year (1999-2014) montly means of LAI data from SPOT sattelite.
  - The geo_em files for [AFR-18](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_AFR-18_geo_ems.tar.gz), [WAS-18](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_WAS-18_geo_ems.tar.gz), and [SAM-12](https://meteo.unican.es/work/CORDEX-CORE-CMIP6/cordex-core_SAM-12_geo_ems.tar.gz) are prepared using MODIS LULC and overlaid with LCZ (geo_em.d01_{domain}_LCZ_params.nc). These geo_em files also include [HWSD](https://www.wdc-climate.de/ui/entry?acronym=WRF_NOAH_HWSD_world_TOP_ST_v121) topsoil texture and monthly LAI based on 15-year (1999–2014) monthly averages of LAI data from SPOT satellite observations downloaded from [CDS](https://cds.climate.copernicus.eu/datasets/satellite-lai-fapar?tab=download).
 
-...
+## WRF461U
+
+[CWC WRF v4.6.1.1](https://github.com/CORDEX-WRF-community/WRF/pull/9) will be used as default version for the new simulations contributing to CORDEX-CORE. Thisis under preparation, but can already be tested from its _devel_ branch:
+
+```bash
+git clone --recurse-submodules -b v4.6.1.1-devel  https://github.com/CORDEX-WRF-community/WRF.git
+```
+
+namelists with the configuration (WRF461U) are in preparation and will be shared as soon as posible ...
 
