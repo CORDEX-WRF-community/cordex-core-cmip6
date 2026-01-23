@@ -48,15 +48,15 @@
 
 &domains
  time_step                           = 75,      ! new, from NCAR, 60 in EURCORDEX
- use_adaptive_time_step	             = .true.,  ! new, from NCAR
- target_cfl	                         = 1.2,     ! new, from NCAR
- max_step_increase_pct	             = 5,       ! new, from NCAR
- starting_time_step	                 = 75,      ! new, from NCAR
- max_time_step	                     = 150,     ! new, from NCAR
- min_time_step	                     = 30,      ! new, from NCAR
- step_to_output_time	               = .true.,  ! new, from NCAR
- time_step_fract_num	               = 0,       ! new, from NCAR
- time_step_fract_den	               = 1,       ! new, from NCAR
+ use_adaptive_time_step              = .true.,  ! new, from NCAR
+ target_cfl                          = 1.2,     ! new, from NCAR
+ max_step_increase_pct               = 5,       ! new, from NCAR
+ starting_time_step                  = 75,      ! new, from NCAR
+ max_time_step                       = 150,     ! new, from NCAR
+ min_time_step                       = 30,      ! new, from NCAR
+ step_to_output_time                 = .true.,  ! new, from NCAR
+ time_step_fract_num                 = 0,       ! new, from NCAR
+ time_step_fract_den                 = 1,       ! new, from NCAR
  max_dom                             = 1,
  s_we                                = 1,
  e_we                                = 579,
