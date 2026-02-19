@@ -26,7 +26,7 @@ ln -s ./ungrib/Variable_Tables/Vtable.ERA-interim.pl Vtable
 - [ ] Run WPS components ```ungrib.exe``` and ```metgrid.exe```
 
 - [ ] Adjust lake surface temperature using the script: 
-[tavg_sfc_with_nco.py](https://2beuploaded)
+[tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py)
 
 ### Historical and Projection Runs
 - [ ] GCM GRIB data for the requested GCMs are provided by Melissa Bukovsky and the NCAR group. 
@@ -51,7 +51,7 @@ git clone --recurse-submodules -b v4.6.1.1-devel https://github.com/CORDEX-WRF-c
 ```
 - [ ] Adjust the calendar to that of your driving GCM before compiling the code
 - [ ] Place IO fields Include/exclude file (Add/Delete variables if needed) in you run directory: 
-[iofields.txt](https://2beuploaded) 
+[iofields.txt](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/setting/iofields.txt)
 - [ ] Link the GHG file corresponding to your driving GCM scenario.
       Example for SSP3‐7.0:
 ```
@@ -62,6 +62,6 @@ ln -s CAMtr_volume_mixing_ratio.SSP370 CAMtr_volume_mixing_ratio
 ```
 auxinput15_inname = 'AOD_d01'
 ```
-- [ ] Edit MPTABLE.TBL and match the CO2 concentration to the one in your CAMtr_volume_mixing_ratio for the simulation year. 
+- [ ] Edit MPTABLE.TBL and match the CO2 concentration to the one in your CAMtr_volume_mixing_ratio for the simulation year (Check [here](https://github.com/CORDEX-WRF-community/euro-cordex-cmip6/issues/1) for more details). 
 
 - [ ] Run ```wrf.exe```
