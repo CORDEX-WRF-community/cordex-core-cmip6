@@ -25,8 +25,12 @@ ln -s ./ungrib/Variable_Tables/Vtable.ERA-interim.pl Vtable
 ```
 - [ ] Run WPS components ```ungrib.exe``` and ```metgrid.exe```
 
-- [ ] Adjust lake surface temperature using the script: 
-[tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py)
+- [ ] Adjust lake surface temperature using the script
+[tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py):
+
+```
+python tavg_sfc_with_nco.py "met_em*d01*"
+```
 
 ### Historical and Projection Runs
 - [ ] GCM GRIB data for the requested GCMs are provided by Melissa Bukovsky and the NCAR group. 
@@ -34,7 +38,12 @@ Data is available via [Globus Connect Server](https://docs.globus.org/globus-con
 Request credentials from Melissa Bukovsky. ungrib 
 - [ ] Link the appropriate [METGRID.TBL](https://github.com/CORDEX-WRF-community/WPS/tree/v4.6.0-devel/metgrid) for your GCM (for EC-Earth GCM to be uploaded).
 - [ ] Run ```metgrid.exe```
-- [ ] Adjust lake surface temperature using the script: [tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py)
+- [ ] Adjust lake surface temperature using the script
+[tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py):
+
+```
+python tavg_sfc_with_nco.py "met_em*d01*"
+```
 
 
 - [ ] ⚠️ Important: To ensure correct surface pressure handling, add the following line to the ```&domains``` section of
