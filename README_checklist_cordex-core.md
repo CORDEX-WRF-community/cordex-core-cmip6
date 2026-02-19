@@ -40,6 +40,8 @@ Request credentials from Melissa Bukovsky. ungrib
 ```
 sfcp_to_sfcp = .true.,
 ```
+- [ ] Adjust lake surface temperature using the script: 
+[tavg_sfc_with_nco.py](https://2beuploaded)
 
  ## WRF 
 - [ ] Clone the WRF v4.6.1.1 code from the CORDEX WRF repository: 
