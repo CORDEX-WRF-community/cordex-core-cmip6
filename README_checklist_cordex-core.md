@@ -5,11 +5,11 @@ simulations for the CORDEX-CORE workflow.
 
 
 ## WPS 
-   - [ ] Obtain the WPS code ( Note: The v4.5-devel branch already contains the required SST update)
+   - [ ] Obtain the WPS code ( Note: The v4.6.0-devel branch already contains the required SST update)
 Clone the CORDEX WPS repository (includes the SST update): 
 
 ```
-git clone --recurse-submodules -b v4.5-devel https://github.com/CORDEX-WRF-community/WPS.git
+git clone --recurse-submodules -b v4.6.0-devel https://github.com/CORDEX-WRF-community/WPS.git
 ```
 
 - [ ] Download geo_em files from the links given in the [CORDEX repository](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/README.md)
@@ -32,17 +32,17 @@ ln -s ./ungrib/Variable_Tables/Vtable.ERA-interim.pl Vtable
 - [ ] GCM GRIB data for the requested GCMs are provided by Melissa Bukovsky and the NCAR group. 
 Data is available via [Globus Connect Server](https://docs.globus.org/globus-connect-server/v5/)
 Request credentials from Melissa Bukovsky. ungrib 
-- [ ] Download and link the appropriate [METGRID.TBL](https://2beuploaded) for your GCM.
+- [ ] Link the appropriate [METGRID.TBL](https://github.com/CORDEX-WRF-community/WPS/tree/v4.6.0-devel/metgrid) for your GCM (for EC-Earth GCM to be uploaded).
 - [ ] Run ```metgrid.exe```
-- [ ] ⚠️ Important for ```real.exe``` To ensure correct surface pressure handling, add the following line to the ```&domains``` section of
-```namelist.input```: 
+- [ ] Adjust lake surface temperature using the script: [tavg_sfc_with_nco.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/tavg_sfc_with_nco.py)
+
+
+- [ ] ⚠️ Important: To ensure correct surface pressure handling, add the following line to the ```&domains``` section of
+```namelist.input``` before running ```real.exe``` (this is not necessary for the evaluation run): 
 
 ```
 sfcp_to_sfcp = .true.,
 ```
-- [ ] Adjust lake surface temperature using the script: 
-[tavg_sfc_with_nco.py](https://2beuploaded)
-
  ## WRF 
 - [ ] Clone the WRF v4.6.1.1 code from the CORDEX WRF repository: 
 
