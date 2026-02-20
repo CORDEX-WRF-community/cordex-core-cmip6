@@ -5,11 +5,11 @@ simulations for the CORDEX-CORE workflow.
 
 
 ## WPS 
-   - [ ] Obtain the WPS code ( Note: The v4.6.0-devel branch already contains the required SST update)
+   - [ ] Obtain the WPS code ( Note: The v4.6-devel branch already contains the required SST update)
 Clone the CORDEX WPS repository (includes the SST update): 
 
 ```
-git clone --recurse-submodules -b v4.6.0-devel https://github.com/CORDEX-WRF-community/WPS.git
+git clone --recurse-submodules -b v4.6-devel https://github.com/CORDEX-WRF-community/WPS.git
 ```
 
 - [ ] Download geo_em files from the links given in the [CORDEX repository](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/README.md)
@@ -18,7 +18,7 @@ git clone --recurse-submodules -b v4.6.0-devel https://github.com/CORDEX-WRF-com
 - [ ] Download ERA5 data 
 Download ERA5 single‐level and pressure-level data from the Copernicus Climate Data Store [CDS](https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels?tab=download)
 - [ ] Prepare Vtable 
-Link the appropriate [Vtable](https://github.com/CORDEX-WRF-community/WPS/blob/v4.5-devel/ungrib/Variable_Tables/Vtable.ERA-interim.pl): 
+Link the appropriate [Vtable](https://github.com/CORDEX-WRF-community/WPS/blob/v4.6-devel/ungrib/Variable_Tables/Vtable.ERA-interim.pl): 
 
 ```
 ln -s ./ungrib/Variable_Tables/Vtable.ERA-interim.pl Vtable
