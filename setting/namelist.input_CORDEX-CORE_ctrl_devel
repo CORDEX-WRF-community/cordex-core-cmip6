@@ -40,10 +40,10 @@
  io_form_history                     = 2,
 
 !Adjust per group. Put in iofields what you want to be written here
-!auxhist10_outname									 = wrfout_hour_d<domain>_<date>
+!auxhist10_outname									          = wrfout_hour_d<domain>_<date>
 !auxhist10_interval                  = 60,
 !frames_per_auxhist10                = 24,
-!io_form_auxhist10	                 = 2,
+!io_form_auxhist10	                  = 2,
 
 !This is used by encar. Adjust per group if you want to use. Put in iofields what you want to be written here
 !auxhist12_outname                   = "wrfout_5day_d<domain>_<date>"
@@ -59,10 +59,10 @@
 !io_form_auxhist3                    = 2,
  
 !Adjust per group. Pressure data can be saved in 6-hourly frequencies, but need to be checked with pCMORizer (should work).
- auxhist23_outname                   = "wrfpress_d<domain>_<date>"
- auxhist23_interval                  = 60,
- frames_per_auxhist23                = 24,
- io_form_auxhist23                   = 2,
+!auxhist23_outname                   = "wrfpress_d<domain>_<date>"
+!auxhist23_interval                  = 60,
+!frames_per_auxhist23                = 24,
+!io_form_auxhist23                   = 2,
  
 !This file indicates which variables will be written and which not, and in which file if not default.
  iofields_filename                   = "iofields.txt", 
@@ -77,13 +77,13 @@
  time_step                           = 96,      ! new, from NCAR, 60 in EURCORDEX
  use_adaptive_time_step	             = .true.,  ! new, from NCAR
  target_cfl	                         = 1.2,     ! new, from NCAR
- max_step_increase_pct	             = 5,       ! new, from NCAR
+ max_step_increase_pct	              = 5,       ! new, from NCAR
  starting_time_step	                 = 96,      ! new, from NCAR
- max_time_step	                     = 156,     ! new, from NCAR
- min_time_step	                     = 12,      ! new, from NCAR
- step_to_output_time	               = .true.,  ! new, from NCAR
- time_step_fract_num	               = 0,       ! new, from NCAR
- time_step_fract_den	               = 1,       ! new, from NCAR
+ max_time_step	                      = 156,     ! new, from NCAR
+ min_time_step	                      = 12,      ! new, from NCAR
+ step_to_output_time	                = .true.,  ! new, from NCAR
+ time_step_fract_num	                = 0,       ! new, from NCAR
+ time_step_fract_den	                = 1,       ! new, from NCAR
 
  max_dom                             = 1,
  s_we                                = 1,
@@ -125,7 +125,7 @@
  sf_urban_physics                    = 1,       ! 0 no urban canopy model in EUROCORDEX
  bl_pbl_physics                      = 8,       ! BouLac; MYNN in EUROCORDEX and YSU in NCAR
  bldt                                = 0,
- cu_physics                          = 10,       ! modified Kain-Fritsch with trigger function based on PDFs, EUCORDEX uses 1 - clasical Kain-Fritsch
+ cu_physics                          = 10,      ! modified Kain-Fritsch with trigger function based on PDFs, EUCORDEX uses 1 - clasical Kain-Fritsch
  cudt                                = 0,
  cu_rad_feedback                     = .true.,  ! NCAR does not use this, works with cu_physics=10
  shcu_physics                        = 0,       ! no independent shallow cumulus (shcu handled by MYNN-EDMF below)
@@ -192,25 +192,25 @@
 
 &fdda
 !Optional, suggested to be used for big domains like AFR, WAS, and maybe EAS
- grid_fdda	                         = 2,
- gfdda_inname	                       = wrffdda_d<domain>,
- gfdda_interval_m	                   = 360,
- gfdda_end_h	                       = 4800000,
- io_form_gfdda	                     = 2,
- fgdt	                               = 0,
- if_no_pbl_nudging_uv	               = 1,
- if_no_pbl_nudging_t                 = 1,
- if_no_pbl_nudging_q	               = 1,
- if_no_pbl_nudging_ph	               = 1,
- if_zfac_uv	                         = 0,
- if_zfac_t	                         = 0,
- if_zfac_q	                         = 0,
- guv	                               = 300,
- gt                                  = 300,
- gq	                                 = 0,
- gph	                               = 300,
- xwavenum	                           = 8,
- ywavenum	                           = 8,
+!grid_fdda	                          = 2,
+!gfdda_inname	                       = wrffdda_d<domain>,
+!gfdda_interval_m	                   = 360,
+!gfdda_end_h	                        = 4800000,
+!io_form_gfdda	                      = 2,
+!fgdt	                               = 0,
+!if_no_pbl_nudging_uv	               = 1,
+!if_no_pbl_nudging_t                 = 1,
+!if_no_pbl_nudging_q	                = 1,
+!if_no_pbl_nudging_ph	               = 1,
+!if_zfac_uv	                         = 0,
+!if_zfac_t	                          = 0,
+!if_zfac_q	                          = 0,
+!guv	                                = 300,
+!gt                                  = 300,
+!gq	                                 = 0,
+!gph	                                = 300,
+!xwavenum	                           = 8,
+!ywavenum	                           = 8,
 /
 
 &dynamics
@@ -258,16 +258,16 @@
 /
 
 &diags
- z_lev_diags                         = 1, ! new, from NCAR
- num_z_levels                        = 3, ! adapted from NCAR
- z_levels                            = -50,-100,-150, ! EUROCORDEX levels + trier2: -200,-250,-300
+!z_lev_diags                         = 1, ! new, from NCAR
+!num_z_levels                        = 3, ! adapted from NCAR
+!z_levels                            = -50,-100,-150, ! EUROCORDEX levels + trier2: -200,-250,-300
 
- p_lev_diags                         = 1,
- use_tot_or_hyd_p                    = 1,
- p_lev_missing                       = -999.,
- num_press_levels                    = 10, ! 10 levels in EUROCORDEX, 14 in NCAR
- press_levels                        = 100000,92500,85000,70000,60000,50000,40000,30000,25000,20000, ! EUROCORDEX + trier2: 15000,10000,7000,5000,3000,2000,1000;
+!p_lev_diags                         = 1,
+!use_tot_or_hyd_p                    = 1,
+!p_lev_missing                       = -999.,
+!num_press_levels                    = 6, ! pCMORizer for postprocessing has 6 levels hardcoded, if changed change it in the code; 10 levels in EUROCORDEX, 14 in NCAR; 
+!press_levels                        = 1000.,925.,850.,700.,500.,200. !trier1: 100000,92500,85000,70000,60000,50000,40000,30000,25000,20000, ! trier2: 15000,10000,7000,5000,3000,2000,1000;
   
- !levels taken from data request https://github.com/WCRP-CORDEX/data-request-table/blob/main/data-request/dreq_default.csv
+!levels taken from data request https://github.com/WCRP-CORDEX/data-request-table/blob/main/data-request/dreq_default.csv
 /
  
