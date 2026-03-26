@@ -26,5 +26,5 @@ Several major points common to the WRF runs across all CORDEX-CORE-CMIP6 domains
 git clone --recurse-submodules -b v4.6.1.1-devel  https://github.com/CORDEX-WRF-community/WRF.git
 ```
 
-namelists with the configuration (WRF461U) are in preparation and will be shared as soon as posible ...
+WPS and WRF namelists with the configuration (WRF461U) are shared in the [setting](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/tree/main/setting) folder. 
 
