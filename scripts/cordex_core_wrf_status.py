@@ -94,7 +94,7 @@ plans = pd.read_csv(csv_url, na_filter=False)
 # Filter
 plans = plans[plans['comments'].str.contains('#CORDEX-CORE', case=False, na=False)]
 plans = plans[plans['source_id'].str.startswith('WRF', na=False)]
-plans = plans[plans['driving_experiment_id'] != 'historical']
+#plans = plans[plans['driving_experiment_id'] != 'historical']
 
 # Add HTML span with status coloring for each institution
 def format_institution_with_status(group):
