@@ -12,7 +12,7 @@ request = {
         "v_component_of_wind"
     ],
     "year": [YEAR],   
-    "month": [MONTH],  
+    "month": [MONTH_NONZERO],  
     "day": [
         "01", "02", "03",
         "04", "05", "06",
