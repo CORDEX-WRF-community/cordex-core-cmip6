@@ -24,7 +24,7 @@
  truelat2  = 0.0,
  truelat1  = -40.0,
  stand_lon = -60.3,
- geog_data_path = '/gpfs/projects/meteo/WORK/josipa/CMIP6toWRF/WPS_GEOG/',
+ geog_data_path = '../WPS_GEOG/',
 /
 
 &ungrib
