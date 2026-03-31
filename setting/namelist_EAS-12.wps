@@ -1,0 +1,39 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2009-05-20_00:00:00', 
+ end_date   = '2009-05-20_12:00:00', 
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ debug_level = 0,
+/
+
+&geogrid
+ parent_id         = 1,
+ parent_grid_ratio = 1,
+ i_parent_start    = 1,
+ j_parent_start    = 1,
+ e_we          = 780 !551, !215,
+ e_sn          = 528 !378, !146,
+ geog_data_res = "30s+default", !'30s+default',
+ dx = 12500,
+ dy = 12500,
+ map_proj = 'lambert',
+ ref_lat   = 34.9,
+ ref_lon   = 116.57,
+ truelat2  = 43, !49.4,
+ truelat1  = 13, !19.4,
+ stand_lon = 116.57,
+ geog_data_path = '/gpfs/projects/meteo/WORK/josipa/CMIP6toWRF/WPS_GEOG/',
+!opt_geogrid_tbl_path = '/oceano/gmeteo/WORK/ASNA/WRF/Binaries/tests/WRF_3.4.1_r2070_INTEL_SERIAL_patch_CLWRFGHG/WPS/geogrid',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+/
