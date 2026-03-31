@@ -1,0 +1,55 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 1,
+ start_date = '2009-05-20_00:00:00', 
+ end_date   = '2009-05-20_12:00:00', 
+ interval_seconds = 21600,
+ io_form_geogrid = 2,
+ debug_level = 0,
+/
+
+&geogrid
+ parent_id         = 1,
+ parent_grid_ratio = 1,
+ i_parent_start    = 1,
+ j_parent_start    = 1,
+ e_we          = 215,
+ e_sn          = 146,
+ geog_data_res = 'modis_30s+2m',
+ dx = 0.44,
+ dy = 0.44,
+ map_proj =  'lat-lon',
+ ref_lat   =  50.50,
+ ref_lon   =  51.59,
+ pole_lat  =  61.0,
+ pole_lon  =  116.3
+ stand_lon =  -116.3,
+ ref_x = 11,
+ ref_y = 135,
+ geog_data_path = '/oceano/gmeteo/DATA/WRF/wps_topo/geog',
+ opt_geogrid_tbl_path = '/oceano/gmeteo/WORK/ASNA/WRF/Binaries/tests/WRF_3.4.1_r2070_INTEL_SERIAL_patch_CLWRFGHG/WPS/geogrid',
+/
+
+&ungrib
+ out_format = 'WPS',
+ prefix = 'FILE',
+/
+
+&metgrid
+ fg_name = 'FILE',
+ io_form_metgrid = 2,
+/
+
+&mod_levs
+ press_pa = 201300 , 200100 , 100000 ,
+             95000 ,  90000 ,
+             85000 ,  80000 ,
+             75000 ,  70000 ,
+             65000 ,  60000 ,
+             55000 ,  50000 ,
+             45000 ,  40000 ,
+             35000 ,  30000 ,
+             25000 ,  20000 ,
+             15000 ,  10000 ,
+              5000 ,   1000
+ /
