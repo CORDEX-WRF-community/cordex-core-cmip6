@@ -98,7 +98,8 @@ run_download () {
 
   sed \
     -e "s/YEAR/${YEAR}/g" \
-    -e "s/MONTH/${MONTH_NONZERO}/g" \
+    -e "s/MONTH/${MONTH}/g" \
+    -e "s/MONTH_NONZERO/${MONTH_NONZERO}/g" \
     -e "s/North/${North}/g" \
     -e "s/West/${West}/g" \
     -e "s/South/${South}/g" \
