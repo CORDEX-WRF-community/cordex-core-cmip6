@@ -25,7 +25,7 @@ request = {
         "sea_ice_cover"
     ],
     "year": [YEAR],   
-    "month": [MONTH],  
+    "month": [MONTH_NONZERO],  
     "day": [
         "01", "02", "03",
         "04", "05", "06",
