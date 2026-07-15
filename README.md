@@ -35,3 +35,14 @@ git clone --recurse-submodules -b v4.6.1.1-devel  https://github.com/CORDEX-WRF-
 
 WPS and WRF namelists with the configuration (WRF461U) are shared in the [setting](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/tree/main/setting) folder. 
 
+## Other configurations
+
+In some domains, the model configuration is not exactly WRF461U:
+
+| domain_id | source_id | configuration |
+|-----------|-----------|---------------|
+|AUS-20i| _WRF412C1_ | |
+|AUS-20i| _WRF-R3_ | |
+|EUR-12| WRF451Q | https://github.com/CORDEX-WRF-community/euro-cordex-cmip6 |
+|NAM-12| WRF461S-SN | https://github.com/CORDEX-WRF-community/NA-CORDEX-CMIP6-NCAR |
+|SEA-25| _WRF_ | |
