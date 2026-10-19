@@ -66,11 +66,11 @@ git clone --recurse-submodules -b v4.6.1.1-devel https://github.com/CORDEX-WRF-c
 ```
 ln -s CAMtr_volume_mixing_ratio.SSP370 CAMtr_volume_mixing_ratio
 ```
-- [ ] Add aerosol files corresponding to you driving GCM (e.g., AOD_d01). Tool to genereate the files can be downloaded from [here](https://github.com/AEI-CORDyS/aerosols4wrf). Note that the start date of the AOD file should correspond to the start date of your simuation.
+- [ ] Add aerosol files corresponding to you driving GCM (e.g., AOD_d01). Tool to generate the files can be downloaded from [here](https://github.com/AEI-CORDyS/aerosols4wrf). Note that the start date of the AOD file should correspond to the start date of your simulation (see [restart_aod_files.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/restart_aod_files.py)
 
 ```
 auxinput15_inname = 'AOD_d01'
 ```
-- [ ] Edit MPTABLE.TBL and match the CO2 concentration to the one in your CAMtr_volume_mixing_ratio for the simulation year (Check [here](https://github.com/CORDEX-WRF-community/euro-cordex-cmip6/issues/1) for more details). 
+- [ ] Edit MPTABLE.TBL and match the CO2 concentration to the one in your CAMtr_volume_mixing_ratio for the simulation year (Check [here](https://github.com/CORDEX-WRF-community/euro-cordex-cmip6/issues/1) for more details). A small script is available (see [restart_co2_MPTABLE.py](https://github.com/CORDEX-WRF-community/cordex-core-cmip6/blob/main/util/restart_co2_MPTABLE.py)) that should be executed at the beginning of each new year.
 
 - [ ] Run ```wrf.exe```
